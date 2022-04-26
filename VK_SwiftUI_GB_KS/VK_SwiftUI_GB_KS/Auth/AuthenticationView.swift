@@ -12,10 +12,6 @@ import Combine
 // MARK: Content
 struct AuthenticationView: View {
     
-    @State private var login = ""
-    @State private var password = ""
-    @State private var shoulShowLogo: Bool = true
-    
     private let keyboardIsOnPublisher = Publishers.Merge(NotificationCenter.default.publisher(for: UIResponder.keyboardDidChangeFrameNotification)
         .map { _ in true }, NotificationCenter.default.publisher(for: UIResponder.keyboardDidChangeFrameNotification)
         .map { _ in false }
@@ -23,6 +19,10 @@ struct AuthenticationView: View {
         .removeDuplicates()
     
     private let backgroundImage = Image("backgroundImage")
+    
+    @State private var login = ""
+    @State private var password = ""
+    @State private var shoulShowLogo: Bool = true
     
     var body: some View {
         ZStack {
@@ -108,10 +108,4 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-// MARK:  UIApplication
-extension UIApplication {
-    
-    func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
+
