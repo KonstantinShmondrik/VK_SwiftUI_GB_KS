@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		008C6BB428181068004EDF7B /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BB328181068004EDF7B /* FriendsView.swift */; };
+		008C6BB828183142004EDF7B /* CircleShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BB728183142004EDF7B /* CircleShadowModifier.swift */; };
+		008C6BBB28183507004EDF7B /* LogoImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BBA28183507004EDF7B /* LogoImageBuilder.swift */; };
+		008C6BBE281836A9004EDF7B /* NameTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BBD281836A9004EDF7B /* NameTextBuilder.swift */; };
+		008C6BC02818370D004EDF7B /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BBF2818370D004EDF7B /* GroupsView.swift */; };
+		008C6BC5281844F3004EDF7B /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BC4281844F3004EDF7B /* UIApplication+endEditing.swift */; };
 		00F9C4D62812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9C4D52812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift */; };
-		00F9C4D82812C52800179F3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9C4D72812C52800179F3D /* ContentView.swift */; };
+		00F9C4D82812C52800179F3D /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9C4D72812C52800179F3D /* AuthenticationView.swift */; };
 		00F9C4DA2812C52F00179F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F9C4D92812C52F00179F3D /* Assets.xcassets */; };
 		00F9C4DD2812C52F00179F3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F9C4DC2812C52F00179F3D /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		008C6BB328181068004EDF7B /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		008C6BB728183142004EDF7B /* CircleShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadowModifier.swift; sourceTree = "<group>"; };
+		008C6BBA28183507004EDF7B /* LogoImageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageBuilder.swift; sourceTree = "<group>"; };
+		008C6BBD281836A9004EDF7B /* NameTextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextBuilder.swift; sourceTree = "<group>"; };
+		008C6BBF2818370D004EDF7B /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		008C6BC4281844F3004EDF7B /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
 		00F9C4D22812C52800179F3D /* VK_SwiftUI_GB_KS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_SwiftUI_GB_KS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F9C4D52812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_SwiftUI_GB_KSApp.swift; sourceTree = "<group>"; };
-		00F9C4D72812C52800179F3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		00F9C4D72812C52800179F3D /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		00F9C4D92812C52F00179F3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00F9C4DC2812C52F00179F3D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +44,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		008C6BB52818107B004EDF7B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				008C6BB328181068004EDF7B /* FriendsView.swift */,
+				008C6BBF2818370D004EDF7B /* GroupsView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		008C6BB628183122004EDF7B /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				008C6BB728183142004EDF7B /* CircleShadowModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		008C6BB9281834EC004EDF7B /* View Builders */ = {
+			isa = PBXGroup;
+			children = (
+				008C6BBA28183507004EDF7B /* LogoImageBuilder.swift */,
+				008C6BBD281836A9004EDF7B /* NameTextBuilder.swift */,
+			);
+			path = "View Builders";
+			sourceTree = "<group>";
+		};
+		008C6BBC28183520004EDF7B /* UI Services */ = {
+			isa = PBXGroup;
+			children = (
+				008C6BB9281834EC004EDF7B /* View Builders */,
+				008C6BB628183122004EDF7B /* Modifiers */,
+			);
+			path = "UI Services";
+			sourceTree = "<group>";
+		};
+		008C6BC2281839AB004EDF7B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				00F9C4D72812C52800179F3D /* AuthenticationView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		008C6BC328184498004EDF7B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				008C6BC4281844F3004EDF7B /* UIApplication+endEditing.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		00F9C4C92812C52800179F3D = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				00F9C4D52812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift */,
-				00F9C4D72812C52800179F3D /* ContentView.swift */,
+				008C6BC2281839AB004EDF7B /* Auth */,
+				008C6BB52818107B004EDF7B /* Cell */,
+				008C6BBC28183520004EDF7B /* UI Services */,
+				008C6BC328184498004EDF7B /* Extensions */,
 				00F9C4D92812C52F00179F3D /* Assets.xcassets */,
 				00F9C4DB2812C52F00179F3D /* Preview Content */,
 			);
@@ -137,7 +203,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F9C4D82812C52800179F3D /* ContentView.swift in Sources */,
+				008C6BB428181068004EDF7B /* FriendsView.swift in Sources */,
+				008C6BC5281844F3004EDF7B /* UIApplication+endEditing.swift in Sources */,
+				008C6BBE281836A9004EDF7B /* NameTextBuilder.swift in Sources */,
+				008C6BB828183142004EDF7B /* CircleShadowModifier.swift in Sources */,
+				008C6BBB28183507004EDF7B /* LogoImageBuilder.swift in Sources */,
+				00F9C4D82812C52800179F3D /* AuthenticationView.swift in Sources */,
+				008C6BC02818370D004EDF7B /* GroupsView.swift in Sources */,
 				00F9C4D62812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
