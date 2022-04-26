@@ -10,7 +10,7 @@ import Combine
 
 
 // MARK: Content
-struct ContentView: View {
+struct AuthenticationView: View {
     
     @State private var login = ""
     @State private var password = ""
@@ -83,7 +83,7 @@ struct ContentView: View {
                     .padding(.top, 10)
                     .padding(.bottom, 20)
                     //                    .buttonStyle(.bordered)
-                    
+                  
                 } // VStack
                 
             } // ScrollView
@@ -102,7 +102,7 @@ struct ContentView: View {
 // MARK:  Previews
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AuthenticationView()
         
     }
 }
