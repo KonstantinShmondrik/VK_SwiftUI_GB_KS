@@ -11,7 +11,7 @@ import SwiftUI
 struct VK_SwiftUI_GB_KSApp: App {
     var body: some Scene {
         WindowGroup {
-            AuthenticationView()
+            ContainerView()
         }
     }
 }
