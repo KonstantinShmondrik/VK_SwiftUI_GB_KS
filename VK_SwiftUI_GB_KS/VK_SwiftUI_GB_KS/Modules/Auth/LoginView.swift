@@ -10,7 +10,7 @@ import Combine
 
 
 // MARK: Content
-struct AuthenticationView: View {
+struct LoginView: View {
     
     private let keyboardIsOnPublisher = Publishers.Merge(NotificationCenter.default.publisher(for: UIResponder.keyboardDidChangeFrameNotification)
         .map { _ in true }, NotificationCenter.default.publisher(for: UIResponder.keyboardDidChangeFrameNotification)
@@ -23,6 +23,9 @@ struct AuthenticationView: View {
     @State private var login = ""
     @State private var password = ""
     @State private var shoulShowLogo: Bool = true
+    @State private var showIncorrentCredentialsWarning = false
+   
+    @Binding var isUserLoggedInn: Bool
     
     var body: some View {
         ZStack {
@@ -65,7 +68,7 @@ struct AuthenticationView: View {
                     .frame(maxWidth: 300)
                     .padding(.top, 20)
                     
-                    Button(action: {print("Hello")}) {
+                    Button(action: verifyLoginData) {
                         Text("Log in")
                     }
                     .padding(.top, 50)
@@ -83,7 +86,7 @@ struct AuthenticationView: View {
                     .padding(.top, 10)
                     .padding(.bottom, 20)
                     //                    .buttonStyle(.bordered)
-                  
+                    
                 } // VStack
                 
             } // ScrollView
@@ -92,9 +95,28 @@ struct AuthenticationView: View {
             }
             
         } // ZStack
-        .onTapGesture { UIApplication.shared.endEditing() }
+        .onTapGesture { UIApplication.shared.endEditing()
+        }.alert(isPresented: $showIncorrentCredentialsWarning) {
+            Alert(title: Text("Error"), message: Text("Incorrect Login/Password was entered"))
+        }
         
     } // body
+    
+    
+    // MARK: - Privat
+    
+    private func verifyLoginData() {
+        if login == "Bar" && password == "Foo" {
+            isUserLoggedInn = true
+            
+        } else {
+            showIncorrentCredentialsWarning = true
+            
+        }
+        password = ""
+        login = ""
+    }
+    
     
 } // ContentView
 
@@ -102,7 +124,7 @@ struct AuthenticationView: View {
 // MARK:  Previews
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthenticationView()
+        ContainerView()
         
     }
 }

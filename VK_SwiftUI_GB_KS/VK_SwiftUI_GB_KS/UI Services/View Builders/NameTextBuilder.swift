@@ -17,8 +17,8 @@ struct NameTextBuilder: View {
     
     var body: some View {
         content
-            .font(.system(size: 25))
+            .font(.system(size: 16))
             .fixedSize(horizontal: false, vertical: true)
-            .frame(width: 250, height: 100, alignment: .leading)
+            .frame(width: 250, height: 80, alignment: .leading)
     }
 }

@@ -18,8 +18,9 @@ struct LogoImageBuilder: View {
     var body: some View {
         content
             .resizable()
-            .frame(width: 100, height: 100 )
-            .cornerRadius(50)
+            .frame(width: 80, height: 80 )
+            .aspectRatio(contentMode: .fill)
+            .cornerRadius(40)
             .modifier(CircleShadowModifier(shadowColor: .black, shadowRadius: 8, x: 4, y: 4))
         
     }
