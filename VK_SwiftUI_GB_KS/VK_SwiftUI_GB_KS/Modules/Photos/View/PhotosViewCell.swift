@@ -10,7 +10,7 @@ import SwiftUI
 struct PhotosViewCell: View {
     
     var photo: Photo
- 
+    
     var body: some View {
         Image(photo.photoName)
             .resizable()

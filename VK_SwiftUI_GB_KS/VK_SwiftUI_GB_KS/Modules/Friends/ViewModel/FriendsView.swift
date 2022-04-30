@@ -16,6 +16,23 @@ struct FriendsView: View {
         Friend(friensName: "Люцик",
                friendsLogo: "Lucy",
                photo: [Photo(photoName: "Lucy"),
+                       Photo(photoName: "Bar"),
+                       Photo(photoName: "Forest"),
+                       Photo(photoName: "Forest"),
+                       Photo(photoName: "Lucy"),
+                       Photo(photoName: "Una"),
+                       Photo(photoName: "Bar"), //
+                       Photo(photoName: "Lucy"),
+                       Photo(photoName: "Bar"),
+                       Photo(photoName: "Forest"),
+                       Photo(photoName: "Lucy"),
+                       Photo(photoName: "Una"),
+                       Photo(photoName: "Bar"),
+                       Photo(photoName: "Lucy"),
+                       Photo(photoName: "Bar"),
+                       Photo(photoName: "Forest"),
+                       Photo(photoName: "Lucy"),
+                       Photo(photoName: "Una"),
                        Photo(photoName: "Bar")
                       ]),
         Friend(friensName: "Зог",
@@ -39,6 +56,7 @@ struct FriendsView: View {
                        Photo(photoName: "Elfo")
                       ])
     ]
+    
     
     var body: some View {
         

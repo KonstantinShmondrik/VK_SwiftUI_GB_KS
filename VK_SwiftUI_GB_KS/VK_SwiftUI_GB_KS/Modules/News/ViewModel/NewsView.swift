@@ -9,8 +9,9 @@ import SwiftUI
 
 struct NewsView: View {
     var body: some View {
-        Text("Здесь будет лента новостей!").navigationBarTitle("Новости", displayMode: .inline)
+        Text("Здесь будет лента новостей!")
             .navigationBarTitle("Новости", displayMode: .inline)
+            
     }
 }
 

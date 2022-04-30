@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002C27A2281DA41000B80E06 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 002C27A1281DA41000B80E06 /* ASCollectionView */; };
 		008C6BB828183142004EDF7B /* CircleShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BB728183142004EDF7B /* CircleShadowModifier.swift */; };
 		008C6BBB28183507004EDF7B /* LogoImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BBA28183507004EDF7B /* LogoImageBuilder.swift */; };
 		008C6BBE281836A9004EDF7B /* NameTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BBD281836A9004EDF7B /* NameTextBuilder.swift */; };
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002C27A2281DA41000B80E06 /* ASCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +317,9 @@
 			dependencies = (
 			);
 			name = VK_SwiftUI_GB_KS;
+			packageProductDependencies = (
+				002C27A1281DA41000B80E06 /* ASCollectionView */,
+			);
 			productName = VK_SwiftUI_GB_KS;
 			productReference = 00F9C4D22812C52800179F3D /* VK_SwiftUI_GB_KS.app */;
 			productType = "com.apple.product-type.application";
@@ -343,6 +348,9 @@
 				Base,
 			);
 			mainGroup = 00F9C4C92812C52800179F3D;
+			packageReferences = (
+				002C27A0281DA41000B80E06 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+			);
 			productRefGroup = 00F9C4D32812C52800179F3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -587,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		002C27A0281DA41000B80E06 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apptekstudios/ASCollectionView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		002C27A1281DA41000B80E06 /* ASCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002C27A0281DA41000B80E06 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00F9C4CA2812C52800179F3D /* Project object */;
 }
