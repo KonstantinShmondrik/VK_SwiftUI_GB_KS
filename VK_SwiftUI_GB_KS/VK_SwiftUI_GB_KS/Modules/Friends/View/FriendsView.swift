@@ -65,7 +65,7 @@ struct FriendsView: View {
                 FriendViewCell(friend: friend)
             }
         }
-        .navigationBarTitle("Друзья", displayMode: .inline)
+//        .navigationBarTitle("Друзья", displayMode: .inline)
     }
 }
 

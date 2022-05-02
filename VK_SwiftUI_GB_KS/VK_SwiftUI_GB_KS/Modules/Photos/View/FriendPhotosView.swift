@@ -30,6 +30,6 @@ struct FriendPhotosView: View {
 
 //struct FriendPhotosView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        FriendPhotosView()
+//        FriendPhotosView(friend: <#Friend#>)
 //    }
 //}

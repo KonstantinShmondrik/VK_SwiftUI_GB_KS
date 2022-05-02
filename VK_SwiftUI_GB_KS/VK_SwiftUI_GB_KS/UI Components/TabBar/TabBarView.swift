@@ -13,23 +13,27 @@ struct TabBarView: View {
         TabView {
             
             FriendsView()
+                .navigationBarTitle("", displayMode: .inline)
                 .tabItem {
                     Image(systemName: "person.2.circle")
                     Text("Друзья")
                 }
             
             GroupsView()
+                .navigationBarTitle("", displayMode: .inline)
                 .tabItem {
                     Image(systemName: "person.3.sequence.fill")
                     Text("Группы")
                     
                 }
             NewsView()
+                .navigationBarTitle("", displayMode: .inline)
                 .tabItem {
                     Image(systemName: "newspaper.fill")
                     Text("Новости")
                 }
         }
+//        .navigationBarBackButtonHidden(true) // если не хотим переходить на страницу логина
     }
 }
 

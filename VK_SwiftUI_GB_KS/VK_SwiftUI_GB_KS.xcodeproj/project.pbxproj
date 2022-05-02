@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		002C27A2281DA41000B80E06 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 002C27A1281DA41000B80E06 /* ASCollectionView */; };
+		002C27A6282030F600B80E06 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C27A5282030F600B80E06 /* Session.swift */; };
+		002C27A82820325D00B80E06 /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C27A72820325D00B80E06 /* VKLoginWebView.swift */; };
+		002C27AA28203ADA00B80E06 /* WebViewNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C27A928203ADA00B80E06 /* WebViewNavigationDelegate.swift */; };
 		008C6BB828183142004EDF7B /* CircleShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BB728183142004EDF7B /* CircleShadowModifier.swift */; };
 		008C6BBB28183507004EDF7B /* LogoImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BBA28183507004EDF7B /* LogoImageBuilder.swift */; };
 		008C6BBE281836A9004EDF7B /* NameTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BBD281836A9004EDF7B /* NameTextBuilder.swift */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		002C27A5282030F600B80E06 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		002C27A72820325D00B80E06 /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
+		002C27A928203ADA00B80E06 /* WebViewNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewNavigationDelegate.swift; sourceTree = "<group>"; };
 		008C6BB728183142004EDF7B /* CircleShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadowModifier.swift; sourceTree = "<group>"; };
 		008C6BBA28183507004EDF7B /* LogoImageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageBuilder.swift; sourceTree = "<group>"; };
 		008C6BBD281836A9004EDF7B /* NameTextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextBuilder.swift; sourceTree = "<group>"; };
@@ -66,6 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002C27A32820295300B80E06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				008C6BF9281D5F15004EDF7B /* NewsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		002C27A4282030CD00B80E06 /* Servises */ = {
+			isa = PBXGroup;
+			children = (
+				002C27A5282030F600B80E06 /* Session.swift */,
+			);
+			path = Servises;
+			sourceTree = "<group>";
+		};
 		008C6BB628183122004EDF7B /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +105,7 @@
 			path = "View Builders";
 			sourceTree = "<group>";
 		};
-		008C6BBC28183520004EDF7B /* UI Services */ = {
+		008C6BBC28183520004EDF7B /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
 				008C6BFF281D67DE004EDF7B /* TabBar */,
@@ -91,13 +113,15 @@
 				008C6BB9281834EC004EDF7B /* View Builders */,
 				008C6BB628183122004EDF7B /* Modifiers */,
 			);
-			path = "UI Services";
+			path = "UI Components";
 			sourceTree = "<group>";
 		};
 		008C6BC2281839AB004EDF7B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				00F9C4D72812C52800179F3D /* LoginView.swift */,
+				002C27A72820325D00B80E06 /* VKLoginWebView.swift */,
+				002C27A928203ADA00B80E06 /* WebViewNavigationDelegate.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -127,6 +151,7 @@
 			children = (
 				008C6BDD281C3125004EDF7B /* Model */,
 				008C6BDF281C314B004EDF7B /* ViewModel */,
+				008C6BFD281D679D004EDF7B /* View */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -145,6 +170,7 @@
 			children = (
 				008C6BE5281C31C5004EDF7B /* Model */,
 				008C6BE3281C31BE004EDF7B /* ViewModel */,
+				002C27A32820295300B80E06 /* View */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -160,8 +186,6 @@
 		008C6BDF281C314B004EDF7B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				008C6BF5281C46AF004EDF7B /* FriendsView.swift */,
-				008C6BFD281D679D004EDF7B /* View */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -169,7 +193,6 @@
 		008C6BE0281C3170004EDF7B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				008C6C02281D69ED004EDF7B /*  GroupsView.swift */,
 				008C6BFE281D67B4004EDF7B /* View */,
 			);
 			path = ViewModel;
@@ -186,7 +209,6 @@
 		008C6BE3281C31BE004EDF7B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				008C6BF9281D5F15004EDF7B /* NewsView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -211,7 +233,6 @@
 		008C6BE7281C3F47004EDF7B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				008C6BF0281C4191004EDF7B /* FriendPhotosView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -227,6 +248,7 @@
 		008C6BFD281D679D004EDF7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				008C6BF5281C46AF004EDF7B /* FriendsView.swift */,
 				008C6BFB281D6242004EDF7B /* FriendViewCell.swift */,
 			);
 			path = View;
@@ -235,6 +257,7 @@
 		008C6BFE281D67B4004EDF7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				008C6C02281D69ED004EDF7B /*  GroupsView.swift */,
 				008C6BBF2818370D004EDF7B /* GroupsViewCell.swift */,
 			);
 			path = View;
@@ -259,6 +282,7 @@
 		008C6C07281D8AF0004EDF7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				008C6BF0281C4191004EDF7B /* FriendPhotosView.swift */,
 				008C6C08281D8B2D004EDF7B /* PhotosViewCell.swift */,
 			);
 			path = View;
@@ -285,8 +309,9 @@
 			children = (
 				00F9C4D52812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift */,
 				008C6BD9281C306F004EDF7B /* Modules */,
-				008C6BBC28183520004EDF7B /* UI Services */,
+				002C27A4282030CD00B80E06 /* Servises */,
 				008C6BC328184498004EDF7B /* Extensions */,
+				008C6BBC28183520004EDF7B /* UI Components */,
 				00F9C4D92812C52F00179F3D /* Assets.xcassets */,
 				00F9C4DB2812C52F00179F3D /* Preview Content */,
 			);
@@ -379,8 +404,10 @@
 			files = (
 				008C6BF4281C429A004EDF7B /* ContainerView.swift in Sources */,
 				008C6BC5281844F3004EDF7B /* UIApplication+endEditing.swift in Sources */,
+				002C27A82820325D00B80E06 /* VKLoginWebView.swift in Sources */,
 				008C6C01281D697A004EDF7B /* TabBarView.swift in Sources */,
 				008C6C05281D7B2B004EDF7B /* Group.swift in Sources */,
+				002C27AA28203ADA00B80E06 /* WebViewNavigationDelegate.swift in Sources */,
 				008C6BBE281836A9004EDF7B /* NameTextBuilder.swift in Sources */,
 				008C6BF8281D509C004EDF7B /* Friend.swift in Sources */,
 				008C6BB828183142004EDF7B /* CircleShadowModifier.swift in Sources */,
@@ -388,6 +415,7 @@
 				008C6BBB28183507004EDF7B /* LogoImageBuilder.swift in Sources */,
 				00F9C4D82812C52800179F3D /* LoginView.swift in Sources */,
 				008C6BF6281C46AF004EDF7B /* FriendsView.swift in Sources */,
+				002C27A6282030F600B80E06 /* Session.swift in Sources */,
 				008C6C03281D69ED004EDF7B /*  GroupsView.swift in Sources */,
 				008C6C0B281D9178004EDF7B /* Photo.swift in Sources */,
 				008C6BFA281D5F15004EDF7B /* NewsView.swift in Sources */,

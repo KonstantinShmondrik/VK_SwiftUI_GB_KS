@@ -21,7 +21,7 @@ struct GroupsView: View {
         List(groups.sorted(by: {$0.groupssName < $1.groupssName})) {group in
             GroupsViewCell(group: group)
         }
-        .navigationBarTitle("Группы", displayMode: .inline)
+//        .navigationBarTitle("Группы", displayMode: .inline)
         
     }
 }
