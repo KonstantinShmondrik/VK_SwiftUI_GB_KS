@@ -7,22 +7,30 @@
 
 import SwiftUI
 import ASCollectionView
+import SDWebImageSwiftUI
 
 struct FriendPhotosView: View {
     
+    @ObservedObject var viewModel: PhotosViewModel
     var friend: Friend
     
+    init(friend: Friend, viewModel: PhotosViewModel) {
+        self.friend = friend
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
-        //             Image(friend.friendsLogo)
-        
-        ASCollectionView(data: friend.photo) {(photo, context) in
+       
+
+        ASCollectionView(data: viewModel.photos) {(photo, context) in
             return PhotosViewCell(photo: photo)
         }.layout {
             .grid(layoutMode: .fixedNumberOfColumns(2),
                   itemSpacing: 10,
                   lineSpacing: 10)
         }
-        .navigationBarTitle(friend.friendsName, displayMode: .inline)
+        .onAppear { viewModel.fetch() }
+        .navigationBarTitle("\((friend.firstName )) \(friend.lastName )", displayMode: .inline)
        
     }
 }
@@ -30,6 +38,6 @@ struct FriendPhotosView: View {
 
 //struct FriendPhotosView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        FriendPhotosView(friend: <#Friend#>)
+//        FriendPhotosView(friend: Friend(), viewModel: PhotosViewModel(userId: Friend(), api: PhotosAPI()))
 //    }
 //}

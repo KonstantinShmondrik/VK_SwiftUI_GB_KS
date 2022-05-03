@@ -6,22 +6,25 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
+
 
 struct FriendViewCell: View {
     
     var friend: Friend
-    
-    
+   
     var body: some View {
         HStack {
       
                   LogoImageBuilder {
-                      Image(friend.friendsLogo)
+                      WebImage(url: URL(string: friend.photo100 ?? ""))
+                      
+//                      Image("Lucy")
                   }
                   Spacer()
       
                   NameTextBuilder {
-                     Text(friend.friendsName)
+                      Text("\((friend.firstName )) \(friend.lastName )")
                   }
       
               }.padding(10)
@@ -29,8 +32,8 @@ struct FriendViewCell: View {
     }
 }
 
-struct FriendViewCell_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendsView()
-    }
-}
+//struct FriendViewCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FriendsView(viewModel: FriendsViewModel(api: FriendsAPI()))
+//    }
+//}

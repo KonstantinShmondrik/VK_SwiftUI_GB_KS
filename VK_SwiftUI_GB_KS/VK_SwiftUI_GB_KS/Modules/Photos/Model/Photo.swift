@@ -5,17 +5,59 @@
 //  Created by Константин Шмондрик on 30.04.2022.
 //
 
+import SwiftUI
 import Foundation
 
-class Photo: Identifiable {
-    
-    internal init(photoName: String) {
-        self.photoName = photoName
-       
-    }
-    
-    let id: UUID = UUID()
-    let photoName: String
-    
-    
+// MARK: - AllPhotoContainer
+struct AllPhotoContainer: Codable {
+    let response: PhotoResponse
 }
+
+// MARK: - Response
+struct PhotoResponse: Codable {
+    let count: Int
+    let items: [Photos]
+}
+
+// MARK: - Item
+struct Photos: Codable, Identifiable {
+    let albumID, id, date: Int
+    let text: String
+    let sizes: [Size]
+    let hasTags: Bool
+    let ownerID: Int
+    let postID: Int?
+ 
+
+    enum CodingKeys: String, CodingKey {
+        case albumID = "album_id"
+        case id, date, text, sizes
+        case hasTags = "has_tags"
+        case ownerID = "owner_id"
+        case postID = "post_id"
+    }
+}
+
+// MARK: - Size
+struct Size: Codable {
+    let width, height: Int
+    let url: String
+    let type: String
+}
+
+
+
+
+
+//class Photo: Identifiable {
+//
+//    internal init(photoName: String) {
+//        self.photoName = photoName
+//
+//    }
+//
+//    let id: UUID = UUID()
+//    let photoName: String
+//
+//
+//}

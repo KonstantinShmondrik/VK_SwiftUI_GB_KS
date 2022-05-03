@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct PhotosViewCell: View {
     
-    var photo: Photo
+    var photo: Photos
     
     var body: some View {
-        Image(photo.photoName)
+       
+        WebImage(url: URL(string: photo.sizes.last?.url ?? ""))
+    
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: 100, height: 100, alignment: .center)

@@ -10,9 +10,11 @@ import WebKit
 
 struct VKLoginWebView: UIViewRepresentable {
     
+    @ObservedObject var session = Session.shared
+   
     fileprivate let navigationDelegate = WebViewNavigationDelegate()
     
-    @ObservedObject var session = Session.shared
+   
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()

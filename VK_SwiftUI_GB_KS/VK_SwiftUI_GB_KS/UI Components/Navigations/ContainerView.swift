@@ -15,11 +15,10 @@ struct ContainerView: View {
     var body: some View {
         NavigationView {
             HStack {
-                LoginView(isUserLoggedInn: $shouldShowMainView)
-                NavigationLink(destination: VKLoginWebView(), isActive: $shouldShowMainView) {
-                    EmptyView()
-                }
+                VKLoginWebView()
                 NavigationLink(destination: TabBarView(), isActive: $session.isAuthorized) { EmptyView() }
+                
+                
             }
         }
     }
@@ -40,3 +39,17 @@ struct ContainerView: View {
     
 }
 
+
+// Если хотимм войти с кастомным логином
+
+//var body: some View {
+//    NavigationView {
+//        HStack {
+//            LoginView(isUserLoggedInn: $shouldShowMainView)
+//            NavigationLink(destination: VKLoginWebView(), isActive: $shouldShowMainView) {
+//                EmptyView()
+//            }
+//            NavigationLink(destination: TabBarView(), isActive: $session.isAuthorized) { EmptyView() }
+//        }
+//    }
+//}

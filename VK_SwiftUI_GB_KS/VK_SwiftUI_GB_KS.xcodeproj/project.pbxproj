@@ -11,6 +11,10 @@
 		002C27A6282030F600B80E06 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C27A5282030F600B80E06 /* Session.swift */; };
 		002C27A82820325D00B80E06 /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C27A72820325D00B80E06 /* VKLoginWebView.swift */; };
 		002C27AA28203ADA00B80E06 /* WebViewNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C27A928203ADA00B80E06 /* WebViewNavigationDelegate.swift */; };
+		002C27AD282046D400B80E06 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 002C27AC282046D400B80E06 /* Alamofire */; };
+		002C27AF2820486000B80E06 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C27AE2820486000B80E06 /* FriendsViewModel.swift */; };
+		002C27B128204A2300B80E06 /* Data+PrettyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C27B028204A2300B80E06 /* Data+PrettyJSON.swift */; };
+		002C27B42820503300B80E06 /* FriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C27B32820503300B80E06 /* FriendsAPI.swift */; };
 		008C6BB828183142004EDF7B /* CircleShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BB728183142004EDF7B /* CircleShadowModifier.swift */; };
 		008C6BBB28183507004EDF7B /* LogoImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BBA28183507004EDF7B /* LogoImageBuilder.swift */; };
 		008C6BBE281836A9004EDF7B /* NameTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6BBD281836A9004EDF7B /* NameTextBuilder.swift */; };
@@ -27,6 +31,10 @@
 		008C6C05281D7B2B004EDF7B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6C04281D7B2B004EDF7B /* Group.swift */; };
 		008C6C09281D8B2D004EDF7B /* PhotosViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6C08281D8B2D004EDF7B /* PhotosViewCell.swift */; };
 		008C6C0B281D9178004EDF7B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6C0A281D9178004EDF7B /* Photo.swift */; };
+		00E5DEC52820874F00002722 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 00E5DEC42820874F00002722 /* SDWebImage */; };
+		00E5DEC828208B0600002722 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00E5DEC728208B0600002722 /* SDWebImageSwiftUI */; };
+		00E5DECA28218A6300002722 /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5DEC928218A6300002722 /* PhotoAPI.swift */; };
+		00E5DECC28218F5200002722 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5DECB28218F5200002722 /* PhotosViewModel.swift */; };
 		00F9C4D62812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9C4D52812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift */; };
 		00F9C4D82812C52800179F3D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9C4D72812C52800179F3D /* LoginView.swift */; };
 		00F9C4DA2812C52F00179F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F9C4D92812C52F00179F3D /* Assets.xcassets */; };
@@ -37,6 +45,9 @@
 		002C27A5282030F600B80E06 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		002C27A72820325D00B80E06 /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
 		002C27A928203ADA00B80E06 /* WebViewNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewNavigationDelegate.swift; sourceTree = "<group>"; };
+		002C27AE2820486000B80E06 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		002C27B028204A2300B80E06 /* Data+PrettyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+PrettyJSON.swift"; sourceTree = "<group>"; };
+		002C27B32820503300B80E06 /* FriendsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPI.swift; sourceTree = "<group>"; };
 		008C6BB728183142004EDF7B /* CircleShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadowModifier.swift; sourceTree = "<group>"; };
 		008C6BBA28183507004EDF7B /* LogoImageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageBuilder.swift; sourceTree = "<group>"; };
 		008C6BBD281836A9004EDF7B /* NameTextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextBuilder.swift; sourceTree = "<group>"; };
@@ -53,6 +64,8 @@
 		008C6C04281D7B2B004EDF7B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		008C6C08281D8B2D004EDF7B /* PhotosViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewCell.swift; sourceTree = "<group>"; };
 		008C6C0A281D9178004EDF7B /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		00E5DEC928218A6300002722 /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
+		00E5DECB28218F5200002722 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		00F9C4D22812C52800179F3D /* VK_SwiftUI_GB_KS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_SwiftUI_GB_KS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F9C4D52812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_SwiftUI_GB_KSApp.swift; sourceTree = "<group>"; };
 		00F9C4D72812C52800179F3D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -65,7 +78,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E5DEC828208B0600002722 /* SDWebImageSwiftUI in Frameworks */,
+				00E5DEC52820874F00002722 /* SDWebImage in Frameworks */,
 				002C27A2281DA41000B80E06 /* ASCollectionView in Frameworks */,
+				002C27AD282046D400B80E06 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,9 +99,19 @@
 		002C27A4282030CD00B80E06 /* Servises */ = {
 			isa = PBXGroup;
 			children = (
+				002C27B228204F9F00B80E06 /* NetworckServices */,
 				002C27A5282030F600B80E06 /* Session.swift */,
 			);
 			path = Servises;
+			sourceTree = "<group>";
+		};
+		002C27B228204F9F00B80E06 /* NetworckServices */ = {
+			isa = PBXGroup;
+			children = (
+				002C27B32820503300B80E06 /* FriendsAPI.swift */,
+				00E5DEC928218A6300002722 /* PhotoAPI.swift */,
+			);
+			path = NetworckServices;
 			sourceTree = "<group>";
 		};
 		008C6BB628183122004EDF7B /* Modifiers */ = {
@@ -130,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				008C6BC4281844F3004EDF7B /* UIApplication+endEditing.swift */,
+				002C27B028204A2300B80E06 /* Data+PrettyJSON.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -161,6 +188,7 @@
 			children = (
 				008C6BE2281C3178004EDF7B /* Model */,
 				008C6BE0281C3170004EDF7B /* ViewModel */,
+				008C6BFE281D67B4004EDF7B /* View */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -186,6 +214,7 @@
 		008C6BDF281C314B004EDF7B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				002C27AE2820486000B80E06 /* FriendsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -193,7 +222,6 @@
 		008C6BE0281C3170004EDF7B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				008C6BFE281D67B4004EDF7B /* View */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -233,6 +261,7 @@
 		008C6BE7281C3F47004EDF7B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				00E5DECB28218F5200002722 /* PhotosViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -344,6 +373,9 @@
 			name = VK_SwiftUI_GB_KS;
 			packageProductDependencies = (
 				002C27A1281DA41000B80E06 /* ASCollectionView */,
+				002C27AC282046D400B80E06 /* Alamofire */,
+				00E5DEC42820874F00002722 /* SDWebImage */,
+				00E5DEC728208B0600002722 /* SDWebImageSwiftUI */,
 			);
 			productName = VK_SwiftUI_GB_KS;
 			productReference = 00F9C4D22812C52800179F3D /* VK_SwiftUI_GB_KS.app */;
@@ -375,6 +407,9 @@
 			mainGroup = 00F9C4C92812C52800179F3D;
 			packageReferences = (
 				002C27A0281DA41000B80E06 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+				002C27AB282046D400B80E06 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				00E5DEC32820874F00002722 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				00E5DEC628208B0600002722 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 00F9C4D32812C52800179F3D /* Products */;
 			projectDirPath = "";
@@ -404,10 +439,14 @@
 			files = (
 				008C6BF4281C429A004EDF7B /* ContainerView.swift in Sources */,
 				008C6BC5281844F3004EDF7B /* UIApplication+endEditing.swift in Sources */,
+				002C27AF2820486000B80E06 /* FriendsViewModel.swift in Sources */,
+				00E5DECA28218A6300002722 /* PhotoAPI.swift in Sources */,
 				002C27A82820325D00B80E06 /* VKLoginWebView.swift in Sources */,
+				00E5DECC28218F5200002722 /* PhotosViewModel.swift in Sources */,
 				008C6C01281D697A004EDF7B /* TabBarView.swift in Sources */,
 				008C6C05281D7B2B004EDF7B /* Group.swift in Sources */,
 				002C27AA28203ADA00B80E06 /* WebViewNavigationDelegate.swift in Sources */,
+				002C27B128204A2300B80E06 /* Data+PrettyJSON.swift in Sources */,
 				008C6BBE281836A9004EDF7B /* NameTextBuilder.swift in Sources */,
 				008C6BF8281D509C004EDF7B /* Friend.swift in Sources */,
 				008C6BB828183142004EDF7B /* CircleShadowModifier.swift in Sources */,
@@ -416,6 +455,7 @@
 				00F9C4D82812C52800179F3D /* LoginView.swift in Sources */,
 				008C6BF6281C46AF004EDF7B /* FriendsView.swift in Sources */,
 				002C27A6282030F600B80E06 /* Session.swift in Sources */,
+				002C27B42820503300B80E06 /* FriendsAPI.swift in Sources */,
 				008C6C03281D69ED004EDF7B /*  GroupsView.swift in Sources */,
 				008C6C0B281D9178004EDF7B /* Photo.swift in Sources */,
 				008C6BFA281D5F15004EDF7B /* NewsView.swift in Sources */,
@@ -633,6 +673,30 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		002C27AB282046D400B80E06 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		00E5DEC32820874F00002722 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		00E5DEC628208B0600002722 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -640,6 +704,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 002C27A0281DA41000B80E06 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
 			productName = ASCollectionView;
+		};
+		002C27AC282046D400B80E06 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002C27AB282046D400B80E06 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		00E5DEC42820874F00002722 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00E5DEC32820874F00002722 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		00E5DEC728208B0600002722 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00E5DEC628208B0600002722 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

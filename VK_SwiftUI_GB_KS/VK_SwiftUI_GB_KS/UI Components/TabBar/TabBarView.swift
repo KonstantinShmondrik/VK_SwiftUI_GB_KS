@@ -12,7 +12,7 @@ struct TabBarView: View {
     var body: some View {
         TabView {
             
-            FriendsView()
+            FriendsView(viewModel: FriendsViewModel(api: FriendsAPI()))
                 .navigationBarTitle("", displayMode: .inline)
                 .tabItem {
                     Image(systemName: "person.2.circle")
@@ -33,7 +33,7 @@ struct TabBarView: View {
                     Text("Новости")
                 }
         }
-//        .navigationBarBackButtonHidden(true) // если не хотим переходить на страницу логина
+        .navigationBarBackButtonHidden(true) // если не хотим переходить на страницу логина
     }
 }
 

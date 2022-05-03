@@ -16,9 +16,9 @@ struct GroupsViewCell: View {
     var body: some View {
         HStack {
             
-            LogoImageBuilder {
-                Image(group.groupsLogo)
-            }
+//            LogoImageBuilder {
+//                Image(group.groupsLogo)
+//            }
             Spacer()
             
             NameTextBuilder {

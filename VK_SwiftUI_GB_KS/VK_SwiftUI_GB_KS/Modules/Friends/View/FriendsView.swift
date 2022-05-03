@@ -10,62 +10,38 @@ import SwiftUI
 
 // MARK: Content
 struct FriendsView: View {
-    
-    
-    @State private var friends: [Friend] = [
-        Friend(friensName: "Люцик",
-               friendsLogo: "Lucy",
-               photo: [Photo(photoName: "Lucy"),
-                       Photo(photoName: "Bar"),
-                       Photo(photoName: "Forest"),
-                       Photo(photoName: "Forest"),
-                       Photo(photoName: "Lucy"),
-                       Photo(photoName: "Una"),
-                       Photo(photoName: "Bar"), //
-                       Photo(photoName: "Lucy"),
-                       Photo(photoName: "Bar"),
-                       Photo(photoName: "Forest"),
-                       Photo(photoName: "Lucy"),
-                       Photo(photoName: "Una"),
-                       Photo(photoName: "Bar"),
-                       Photo(photoName: "Lucy"),
-                       Photo(photoName: "Bar"),
-                       Photo(photoName: "Forest"),
-                       Photo(photoName: "Lucy"),
-                       Photo(photoName: "Una"),
-                       Photo(photoName: "Bar")
-                      ]),
-        Friend(friensName: "Зог",
-               friendsLogo: "Zog",
-               photo: [Photo(photoName: "Zog"),
-                       Photo(photoName: "Elfud")
-                      ]),
-        Friend(friensName: "Тиабини",
-               friendsLogo: "Tiabiny",
-               photo: [Photo(photoName: "Elfud"),
-                       Photo(photoName: "Tiabiny")
-                      ]),
-        Friend(friensName: "Уна",
-               friendsLogo: "Una",
-               photo: [Photo(photoName: "Forest"),
-                       Photo(photoName: "Una")
-                      ]),
-        Friend(friensName: "Эльфо",
-               friendsLogo: "Elfo",
-               photo: [Photo(photoName: "Forest"),
-                       Photo(photoName: "Elfo")
-                      ])
-    ]
-    
+
+
+    @ObservedObject var viewModel: FriendsViewModel
+//    @ObservedObject var viewModelPhoto: PhotosViewModel
+   
+    init(viewModel: FriendsViewModel) {
+        self.viewModel = viewModel
+       
+    }
     
     var body: some View {
-        
-        List(friends.sorted(by: { $0.friendsName < $1.friendsName})) { friend in
-            NavigationLink(destination: FriendPhotosView(friend: friend)) {
+        List(viewModel.friends
+//            .sorted(by: { $0.lastName ?? "" ?? "" < $1.lastName })
+        )
+        { friend in
+            NavigationLink(destination: FriendPhotosView(friend: friend, viewModel: PhotosViewModel(userId: friend, api: PhotosAPI() ))) {
                 FriendViewCell(friend: friend)
             }
+            
         }
+        .onAppear { viewModel.fetch() }
+        
+        
+        
+        
+//        List(friends.sorted(by: { $0.friendsName < $1.friendsName})) { friend in
+//            NavigationLink(destination: FriendPhotosView(friend: friend)) {
+//                FriendViewCell(friend: friend)
+//            }
+//        }
 //        .navigationBarTitle("Друзья", displayMode: .inline)
+            
     }
 }
 
@@ -73,7 +49,8 @@ struct FriendsView: View {
 // MARK:  Previews
 struct FriendsView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsView()
+//        FriendsView(viewModel: FriendsViewModel(api: FriendsAPI()))
+        FriendsView(viewModel: FriendsViewModel(api: FriendsAPI()))
     }
 }
 
