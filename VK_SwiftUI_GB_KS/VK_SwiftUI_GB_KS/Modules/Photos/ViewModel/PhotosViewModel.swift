@@ -10,19 +10,19 @@ import SwiftUI
 
 class PhotosViewModel: ObservableObject {
     
-    let api: PhotoService
-    let userId: Friend
+    let api: PhotosService
+    let friend: Friend
     
     @Published var photos: [Photos] = []
     
-    init(userId: Friend, api: PhotoService) {
-        self.userId = userId
+    init(friend: Friend, api: PhotosService) {
+        self.friend = friend
         self.api = api
     }
     
     public func fetch() {
         
-        api.getPhotos(userId: userId.id) { [weak self] photos in
+        api.getPhotos(userId: friend.id) { [weak self] photos in
             guard let self = self else { return }
             self.photos = photos
         }

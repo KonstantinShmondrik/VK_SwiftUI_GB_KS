@@ -32,8 +32,8 @@ struct FriendViewCell: View {
     }
 }
 
-//struct FriendViewCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FriendsView(viewModel: FriendsViewModel(api: FriendsAPI()))
-//    }
-//}
+struct FriendViewCell_Previews: PreviewProvider {
+    static var previews: some View {
+        FriendsView(viewModel: FriendsViewModel(api: FriendsAPI()))
+    }
+}

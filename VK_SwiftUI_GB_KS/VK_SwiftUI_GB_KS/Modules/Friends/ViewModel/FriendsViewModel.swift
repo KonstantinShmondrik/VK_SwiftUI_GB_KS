@@ -11,11 +11,11 @@ import SwiftUI
 
 class FriendsViewModel: ObservableObject {
     
-    let api: FriendService
+    let api: FriendsService
     
     @Published var friends: [Friend] = []
     
-    init(api: FriendService) {
+    init(api: FriendsService) {
         self.api = api
     }
     

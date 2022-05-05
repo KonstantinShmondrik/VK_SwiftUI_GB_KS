@@ -18,6 +18,6 @@ class Session: ObservableObject {
     @Published var token = ""                  // токен в VK
     @Published var userId = ""                 // ID пользователя
     @Published var version = "5.131"           // версия VK API
-    @Published var cliendId = "7938282"        // // "6704883" "7822904" "7938282"
+    @Published var cliendId = "7822904"        // // "6704883" "7822904" "7938282"
 
 }

@@ -12,25 +12,22 @@ import Foundation
 import Alamofire
 import SwiftUI
 
-//import SwiftyJSON
 
-protocol PhotoService {
+protocol PhotosService {
     func getPhotos(userId: Int, completion: @escaping([Photos])->())
 }
 
 
 
-class PhotosAPI: PhotoService {
+class PhotosAPI: PhotosService {
     
     @ObservedObject var session = Session.shared
-    
     
     let baseUrl = "https://api.vk.com/method"
     var params: Parameters = [:]
     var request: String?
    
-    
-    
+
     // MARK: - DTO Вызов фото друзей
     func getPhotos(userId: Int, completion: @escaping([Photos])->()) {
         let method = "/photos.getAll"
@@ -63,6 +60,5 @@ class PhotosAPI: PhotoService {
             }
         }
     }
-    
 }
 
