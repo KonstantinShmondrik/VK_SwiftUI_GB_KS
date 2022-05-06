@@ -5,19 +5,43 @@
 //  Created by Константин Шмондрик on 30.04.2022.
 //
 
+
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let friendsContainer = try? newJSONDecoder().decode(FriendsContainer.self, from: jsonData)
+
 import Foundation
 
-class Friend: Identifiable {
-    
-    internal init(friensName: String, friendsLogo: String, photo: [Photo]) {
-        self.friendsName = friensName
-        self.friendsLogo = friendsLogo
-        self.photo = photo
-    }
-    
-    let id: UUID = UUID()
-    let friendsName: String
-    let friendsLogo: String
-    let photo: [Photo]
-    
+// MARK: - FriendsContainer
+struct FriendsContainer: Codable {
+    let response: FriendsResponse
 }
+
+// MARK: - Response
+struct FriendsResponse: Codable {
+    let count: Int
+    let items: [Friend]
+}
+
+// MARK: - Item
+struct Friend: Codable, Identifiable {
+    
+    let id: Int
+    let firstName: String
+    let lastName: String
+    let photo100: String?
+    let online: Int?
+    let sex: Int?
+    let trackCode: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case firstName = "first_name"
+        case id
+        case lastName = "last_name"
+        case photo100 = "photo_100"
+        case online, sex
+        case trackCode = "track_code"
+    }
+}
+

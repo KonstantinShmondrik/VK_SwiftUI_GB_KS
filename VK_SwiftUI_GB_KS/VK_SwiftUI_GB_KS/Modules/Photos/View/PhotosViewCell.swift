@@ -6,18 +6,25 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct PhotosViewCell: View {
     
-    var photo: Photo
+    var photo: Photos
     
     var body: some View {
-        Image(photo.photoName)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 100, height: 100, alignment: .center)
-            .aspectRatio(contentMode: .fill)
+        
+        GeometryReader { proxy in
             
+            WebImage(url: URL(string: photo.sizes.last?.url ?? ""))
+            
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 100, height: 100, alignment: .center)
+//                .aspectRatio(contentMode: .fill)
+                .frame(width: proxy.size.width, height: proxy.size.height,  alignment: .center)
+               
+        }
     }
 }
 

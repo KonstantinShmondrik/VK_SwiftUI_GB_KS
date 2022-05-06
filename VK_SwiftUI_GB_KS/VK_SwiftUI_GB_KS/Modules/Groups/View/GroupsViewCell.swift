@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 
 
@@ -17,22 +18,22 @@ struct GroupsViewCell: View {
         HStack {
             
             LogoImageBuilder {
-                Image(group.groupsLogo)
+                WebImage(url: URL(string: group.photo100))
             }
             Spacer()
             
             NameTextBuilder {
-                Text(group.groupssName)
+                Text(group.name)
             }
             
         }.padding(10)
-           
+        
     }
 }
-
-// MARK:  Previews
-struct GroupsViewCell_Previews: PreviewProvider {
-    static var previews: some View {
-        GroupsView()
-    }
-}
+//
+//// MARK:  Previews
+//struct GroupsViewCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GroupsView(viewModel: GroupsViewModel(api: GroupsAPI()))
+//    }
+//}
