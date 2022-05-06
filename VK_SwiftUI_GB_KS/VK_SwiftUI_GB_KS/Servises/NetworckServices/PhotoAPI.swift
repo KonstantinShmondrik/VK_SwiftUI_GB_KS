@@ -17,8 +17,6 @@ protocol PhotosService {
     func getPhotos(userId: Int, completion: @escaping([Photos])->())
 }
 
-
-
 class PhotosAPI: PhotosService {
     
     @ObservedObject var session = Session.shared

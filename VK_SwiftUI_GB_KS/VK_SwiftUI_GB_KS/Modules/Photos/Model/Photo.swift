@@ -44,20 +44,3 @@ struct Size: Codable {
     let url: String
     let type: String
 }
-
-
-
-
-
-//class Photo: Identifiable {
-//
-//    internal init(photoName: String) {
-//        self.photoName = photoName
-//
-//    }
-//
-//    let id: UUID = UUID()
-//    let photoName: String
-//
-//
-//}

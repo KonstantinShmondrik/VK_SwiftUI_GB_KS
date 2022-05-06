@@ -37,6 +37,11 @@
 		00E5DECC28218F5200002722 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5DECB28218F5200002722 /* PhotosViewModel.swift */; };
 		00E5DECE2823E2EA00002722 /* GroupsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5DECD2823E2EA00002722 /* GroupsAPI.swift */; };
 		00E5DED02823E94000002722 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5DECF2823E94000002722 /* GroupsViewModel.swift */; };
+		00E5DED52824301300002722 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 00E5DED42824301300002722 /* RealmSwift */; };
+		00E5DED8282431D700002722 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5DED7282431D700002722 /* RealmService.swift */; };
+		00E5DEDA282431F800002722 /* DetachableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5DED9282431F800002722 /* DetachableObject.swift */; };
+		00E5DEDC2824325800002722 /* Realm.Configuration+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5DEDB2824325800002722 /* Realm.Configuration+Ext.swift */; };
+		00E5DEDF2824351D00002722 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 00E5DEDE2824351D00002722 /* SwiftyJSON */; };
 		00F9C4D62812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9C4D52812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift */; };
 		00F9C4D82812C52800179F3D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9C4D72812C52800179F3D /* LoginView.swift */; };
 		00F9C4DA2812C52F00179F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F9C4D92812C52F00179F3D /* Assets.xcassets */; };
@@ -70,6 +75,9 @@
 		00E5DECB28218F5200002722 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		00E5DECD2823E2EA00002722 /* GroupsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAPI.swift; sourceTree = "<group>"; };
 		00E5DECF2823E94000002722 /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
+		00E5DED7282431D700002722 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		00E5DED9282431F800002722 /* DetachableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachableObject.swift; sourceTree = "<group>"; };
+		00E5DEDB2824325800002722 /* Realm.Configuration+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm.Configuration+Ext.swift"; sourceTree = "<group>"; };
 		00F9C4D22812C52800179F3D /* VK_SwiftUI_GB_KS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_SwiftUI_GB_KS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F9C4D52812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_SwiftUI_GB_KSApp.swift; sourceTree = "<group>"; };
 		00F9C4D72812C52800179F3D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -82,9 +90,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E5DEDF2824351D00002722 /* SwiftyJSON in Frameworks */,
 				00E5DEC828208B0600002722 /* SDWebImageSwiftUI in Frameworks */,
 				00E5DEC52820874F00002722 /* SDWebImage in Frameworks */,
 				002C27A2281DA41000B80E06 /* ASCollectionView in Frameworks */,
+				00E5DED52824301300002722 /* RealmSwift in Frameworks */,
 				002C27AD282046D400B80E06 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +113,7 @@
 		002C27A4282030CD00B80E06 /* Servises */ = {
 			isa = PBXGroup;
 			children = (
+				00E5DED6282431B000002722 /* RealmService */,
 				002C27B228204F9F00B80E06 /* NetworckServices */,
 				002C27A5282030F600B80E06 /* Session.swift */,
 			);
@@ -162,6 +173,7 @@
 			children = (
 				008C6BC4281844F3004EDF7B /* UIApplication+endEditing.swift */,
 				002C27B028204A2300B80E06 /* Data+PrettyJSON.swift */,
+				00E5DEDB2824325800002722 /* Realm.Configuration+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -323,6 +335,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		00E5DED6282431B000002722 /* RealmService */ = {
+			isa = PBXGroup;
+			children = (
+				00E5DED7282431D700002722 /* RealmService.swift */,
+				00E5DED9282431F800002722 /* DetachableObject.swift */,
+			);
+			path = RealmService;
+			sourceTree = "<group>";
+		};
 		00F9C4C92812C52800179F3D = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +403,8 @@
 				002C27AC282046D400B80E06 /* Alamofire */,
 				00E5DEC42820874F00002722 /* SDWebImage */,
 				00E5DEC728208B0600002722 /* SDWebImageSwiftUI */,
+				00E5DED42824301300002722 /* RealmSwift */,
+				00E5DEDE2824351D00002722 /* SwiftyJSON */,
 			);
 			productName = VK_SwiftUI_GB_KS;
 			productReference = 00F9C4D22812C52800179F3D /* VK_SwiftUI_GB_KS.app */;
@@ -416,6 +439,8 @@
 				002C27AB282046D400B80E06 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				00E5DEC32820874F00002722 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				00E5DEC628208B0600002722 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				00E5DED32824301300002722 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				00E5DEDD2824351D00002722 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 00F9C4D32812C52800179F3D /* Products */;
 			projectDirPath = "";
@@ -463,9 +488,12 @@
 				00F9C4D82812C52800179F3D /* LoginView.swift in Sources */,
 				008C6BF6281C46AF004EDF7B /* FriendsView.swift in Sources */,
 				002C27A6282030F600B80E06 /* Session.swift in Sources */,
+				00E5DEDC2824325800002722 /* Realm.Configuration+Ext.swift in Sources */,
 				002C27B42820503300B80E06 /* FriendsAPI.swift in Sources */,
 				008C6C03281D69ED004EDF7B /*  GroupsView.swift in Sources */,
 				008C6C0B281D9178004EDF7B /* Photo.swift in Sources */,
+				00E5DEDA282431F800002722 /* DetachableObject.swift in Sources */,
+				00E5DED8282431D700002722 /* RealmService.swift in Sources */,
 				008C6BFA281D5F15004EDF7B /* NewsView.swift in Sources */,
 				008C6BC02818370D004EDF7B /* GroupsViewCell.swift in Sources */,
 				00F9C4D62812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift in Sources */,
@@ -705,6 +733,22 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		00E5DED32824301300002722 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.2;
+			};
+		};
+		00E5DEDD2824351D00002722 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -727,6 +771,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 00E5DEC628208B0600002722 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		00E5DED42824301300002722 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00E5DED32824301300002722 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		00E5DEDE2824351D00002722 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00E5DEDD2824351D00002722 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

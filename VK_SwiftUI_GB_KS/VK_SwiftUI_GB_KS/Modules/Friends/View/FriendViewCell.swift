@@ -12,23 +12,21 @@ import SDWebImageSwiftUI
 struct FriendViewCell: View {
     
     var friend: Friend
-   
+    
     var body: some View {
         HStack {
-      
-                  LogoImageBuilder {
-                      WebImage(url: URL(string: friend.photo100 ?? ""))
-                      
-//                      Image("Lucy")
-                  }
-                  Spacer()
-      
-                  NameTextBuilder {
-                      Text("\((friend.firstName )) \(friend.lastName )")
-                  }
-      
-              }.padding(10)
-          
+            
+            LogoImageBuilder {
+                WebImage(url: URL(string: friend.photo100 ?? ""))
+            }
+            Spacer()
+            
+            NameTextBuilder {
+                Text("\((friend.firstName )) \(friend.lastName )")
+            }
+            
+        }.padding(10)
+        
     }
 }
 

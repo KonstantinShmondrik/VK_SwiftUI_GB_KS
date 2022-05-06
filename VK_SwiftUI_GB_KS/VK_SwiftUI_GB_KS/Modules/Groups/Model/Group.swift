@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 // MARK: - GroupContainer
 struct GroupContainer: Codable {
@@ -19,15 +20,19 @@ struct GroupsResponse: Codable {
 }
 
 // MARK: - Item
-struct Group: Codable, Identifiable {
-    let id, isClosed, isAdvertiser: Int
-    let type: String?
-    let isMember: Int
-    let photo50, photo200: String
-    let activity: String?
-    let isAdmin: Int
-    let photo100: String
-    let name, screenName: String
+class Group: Object, Codable, Identifiable {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var isClosed: Int = 0
+    @objc dynamic var isAdvertiser: Int = 0
+    @objc dynamic var type: String = ""
+    @objc dynamic var isMember: Int = 0
+    @objc dynamic var photo50: String = ""
+    @objc dynamic var photo200: String = ""
+    @objc dynamic var activity: String = "N/A"
+    @objc dynamic var isAdmin: Int = 0
+    @objc dynamic var photo100: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var screenName: String = ""
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -42,5 +47,8 @@ struct Group: Codable, Identifiable {
         case photo100 = "photo_100"
         case name
         case screenName = "screen_name"
+    }
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }

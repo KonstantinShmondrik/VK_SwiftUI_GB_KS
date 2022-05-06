@@ -16,7 +16,7 @@ struct GroupsView: View {
     }
     
     var body: some View {
-        List(viewModel.groups.sorted(by: {$0.name < $1.name})) { group in
+        List(viewModel.detachedGroups.sorted(by: {$0.name < $1.name})) { group in
             GroupsViewCell(group: group)
         }
         .onAppear { viewModel.fetch() }
@@ -25,8 +25,8 @@ struct GroupsView: View {
     }
 }
 
-struct _GroupsView_Previews: PreviewProvider {
-    static var previews: some View {
-        GroupsView(viewModel: GroupsViewModel(api: GroupsAPI()))
-    }
-}
+//struct _GroupsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GroupsView(viewModel: GroupsViewModel(api: GroupsAPI()))
+//    }
+//}

@@ -9,9 +9,11 @@
 import Foundation
 import Alamofire
 import SwiftUI
+import SwiftyJSON
+import RealmSwift
 
 protocol GroupsService {
-    func getGroups(completion: @escaping([Group])->())
+    func getGroups(completion: ((Swift.Result<[Group], Error>) -> Void)?)
 }
 
 class GroupsAPI: GroupsService {
@@ -25,7 +27,7 @@ class GroupsAPI: GroupsService {
     
     
     //    MARK: - DTO
-    func getGroups(completion: @escaping([Group])->()) {
+    func getGroups(completion: ((Swift.Result<[Group], Error>) -> Void)? = nil) {
         
         let method = "/groups.get"
         let url = baseUrl + method
@@ -42,20 +44,20 @@ class GroupsAPI: GroupsService {
         params["count"] = "50"
         
         AF.request(url, method: .get, parameters: params).responseData { response in
+            
+            
             self.request = response.request?.description
             
             print("вызов групп пользователя")
-            //            print( response.result)
             print(response.data?.prettyJSON)
             
             guard let jsonData = response.data else { return }
             
             do {
-                let usersGroupContainer = try JSONDecoder().decode(GroupContainer.self, from: jsonData)
+                let itemsData = try JSON(jsonData)["response"]["items"].rawData()
+                let groups = try JSONDecoder().decode([Group].self, from: itemsData)
                 
-                let groups = usersGroupContainer.response.items
-                
-                completion(groups)
+                completion?(.success(groups))
             } catch {
                 print(error)
             }

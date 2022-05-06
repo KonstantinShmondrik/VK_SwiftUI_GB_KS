@@ -20,10 +20,8 @@ struct FriendsView: View {
     }
     
     var body: some View {
-        List(viewModel.friends
-             //            .sorted(by: { $0.lastName ?? "" ?? "" < $1.lastName })
-        )
-        { friend in
+        List(viewModel.friends.sorted(by: { $0.lastName < $1.lastName })) { friend in
+            
             NavigationLink(destination: FriendPhotosView(viewModel: PhotosViewModel(friend: friend, api: PhotosAPI() ))) {
                 FriendViewCell(friend: friend)
             }

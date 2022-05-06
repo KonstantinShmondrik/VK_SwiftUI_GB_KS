@@ -30,10 +30,10 @@ struct GroupsViewCell: View {
         
     }
 }
-
-// MARK:  Previews
-struct GroupsViewCell_Previews: PreviewProvider {
-    static var previews: some View {
-        GroupsView(viewModel: GroupsViewModel(api: GroupsAPI()))
-    }
-}
+//
+//// MARK:  Previews
+//struct GroupsViewCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GroupsView(viewModel: GroupsViewModel(api: GroupsAPI()))
+//    }
+//}

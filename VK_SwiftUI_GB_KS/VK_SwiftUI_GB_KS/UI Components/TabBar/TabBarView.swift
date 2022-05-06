@@ -19,7 +19,7 @@ struct TabBarView: View {
                     Text("Друзья")
                 }
             
-            GroupsView(viewModel: GroupsViewModel(api: GroupsAPI()))
+            GroupsView(viewModel: GroupsViewModel(api: GroupsAPI(), realmService: RealmService()))
                 .navigationBarTitle("", displayMode: .inline)
                 .tabItem {
                     Image(systemName: "person.3.sequence.fill")
