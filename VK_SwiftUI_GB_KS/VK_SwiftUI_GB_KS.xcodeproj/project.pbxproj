@@ -31,6 +31,7 @@
 		008C6C05281D7B2B004EDF7B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6C04281D7B2B004EDF7B /* Group.swift */; };
 		008C6C09281D8B2D004EDF7B /* PhotosViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6C08281D8B2D004EDF7B /* PhotosViewCell.swift */; };
 		008C6C0B281D9178004EDF7B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6C0A281D9178004EDF7B /* Photo.swift */; };
+		00DCDBB52838109700A930DD /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCDBB42838109700A930DD /* LikeButton.swift */; };
 		00E5DEC52820874F00002722 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 00E5DEC42820874F00002722 /* SDWebImage */; };
 		00E5DEC828208B0600002722 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00E5DEC728208B0600002722 /* SDWebImageSwiftUI */; };
 		00E5DECA28218A6300002722 /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5DEC928218A6300002722 /* PhotoAPI.swift */; };
@@ -71,6 +72,7 @@
 		008C6C04281D7B2B004EDF7B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		008C6C08281D8B2D004EDF7B /* PhotosViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewCell.swift; sourceTree = "<group>"; };
 		008C6C0A281D9178004EDF7B /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		00DCDBB42838109700A930DD /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		00E5DEC928218A6300002722 /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
 		00E5DECB28218F5200002722 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		00E5DECD2823E2EA00002722 /* GroupsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAPI.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				008C6BF2281C4229004EDF7B /* Navigations */,
 				008C6BB9281834EC004EDF7B /* View Builders */,
 				008C6BB628183122004EDF7B /* Modifiers */,
+				00DCDBB32838105B00A930DD /* CastomButtons */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -335,6 +338,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		00DCDBB32838105B00A930DD /* CastomButtons */ = {
+			isa = PBXGroup;
+			children = (
+				00DCDBB42838109700A930DD /* LikeButton.swift */,
+			);
+			path = CastomButtons;
+			sourceTree = "<group>";
+		};
 		00E5DED6282431B000002722 /* RealmService */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +503,7 @@
 				002C27B42820503300B80E06 /* FriendsAPI.swift in Sources */,
 				008C6C03281D69ED004EDF7B /*  GroupsView.swift in Sources */,
 				008C6C0B281D9178004EDF7B /* Photo.swift in Sources */,
+				00DCDBB52838109700A930DD /* LikeButton.swift in Sources */,
 				00E5DEDA282431F800002722 /* DetachableObject.swift in Sources */,
 				00E5DED8282431D700002722 /* RealmService.swift in Sources */,
 				008C6BFA281D5F15004EDF7B /* NewsView.swift in Sources */,
@@ -706,7 +718,7 @@
 			repositoryURL = "https://github.com/apptekstudios/ASCollectionView.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 2.1.1;
 			};
 		};
 		002C27AB282046D400B80E06 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -714,7 +726,7 @@
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				minimumVersion = 5.6.1;
 			};
 		};
 		00E5DEC32820874F00002722 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
@@ -722,7 +734,7 @@
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				minimumVersion = 5.12.5;
 			};
 		};
 		00E5DEC628208B0600002722 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
@@ -730,7 +742,7 @@
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 2.0.2;
 			};
 		};
 		00E5DED32824301300002722 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
@@ -746,7 +758,7 @@
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				minimumVersion = 5.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -12,22 +12,27 @@ struct PhotosViewCell: View {
     
     var photo: Photos
     
+    @State private var likeName = ""
+    
     var body: some View {
-        
-        GeometryReader { proxy in
-            
-            WebImage(url: URL(string: photo.sizes.last?.url ?? ""))
-            
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 100, height: 100, alignment: .center)
-//                .aspectRatio(contentMode: .fill)
-                .frame(width: proxy.size.width, height: proxy.size.height,  alignment: .center)
-               
+        VStack {
+            GeometryReader { proxy in
+                WebImage(url: URL(string: photo.sizes.last?.url ?? ""))
+                
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 100, height: 100, alignment: .center)
+                //                .aspectRatio(contentMode: .fill)
+                    .frame(width: proxy.size.width, height: proxy.size.height,  alignment: .center)
+            }
+            LikeButton()
         }
     }
+    
+   
+    
 }
-
+//
 //struct PhotosViewCell_Previews: PreviewProvider {
 //    static var previews: some View {
 //        PhotosViewCell()
