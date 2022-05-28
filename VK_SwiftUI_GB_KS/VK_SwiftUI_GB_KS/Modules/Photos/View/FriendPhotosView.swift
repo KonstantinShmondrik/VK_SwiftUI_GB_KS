@@ -18,6 +18,8 @@ struct FriendPhotosView: View {
         GridItem(.flexible(minimum: 0, maximum: .infinity))
     ]
     
+    @State private var photoRowHeight: CGFloat? = nil
+    
     init(viewModel: PhotosViewModel) {
         self.viewModel = viewModel
     }
@@ -40,7 +42,7 @@ struct FriendPhotosView: View {
                         if let photos = viewModel.photos {
                             ForEach(photos) { photo in
                                 PhotosViewCell(photo: photo)
-                                    .frame(height: geometry.size.width/2)
+                                    .frame(height: photoRowHeight)
                             }
                         }
                     }
@@ -48,6 +50,9 @@ struct FriendPhotosView: View {
             }
             .onAppear { viewModel.fetch() }
             .navigationBarTitle("\((viewModel.friend.firstName )) \(viewModel.friend.lastName )", displayMode: .inline)
+            .onPreferenceChange(PhotoHeightPreferenceKey.self) {height in
+                photoRowHeight = height
+            }
             
             
             

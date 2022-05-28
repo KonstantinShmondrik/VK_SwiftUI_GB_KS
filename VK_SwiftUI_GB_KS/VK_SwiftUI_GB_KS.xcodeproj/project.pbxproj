@@ -31,6 +31,7 @@
 		008C6C05281D7B2B004EDF7B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6C04281D7B2B004EDF7B /* Group.swift */; };
 		008C6C09281D8B2D004EDF7B /* PhotosViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6C08281D8B2D004EDF7B /* PhotosViewCell.swift */; };
 		008C6C0B281D9178004EDF7B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C6C0A281D9178004EDF7B /* Photo.swift */; };
+		00AE90EC28428F1D00817D8D /* PhotoHeightPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE90EB28428F1D00817D8D /* PhotoHeightPreferenceKey.swift */; };
 		00DCDBB52838109700A930DD /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCDBB42838109700A930DD /* LikeButton.swift */; };
 		00E5DEC52820874F00002722 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 00E5DEC42820874F00002722 /* SDWebImage */; };
 		00E5DEC828208B0600002722 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00E5DEC728208B0600002722 /* SDWebImageSwiftUI */; };
@@ -72,6 +73,7 @@
 		008C6C04281D7B2B004EDF7B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		008C6C08281D8B2D004EDF7B /* PhotosViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewCell.swift; sourceTree = "<group>"; };
 		008C6C0A281D9178004EDF7B /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		00AE90EB28428F1D00817D8D /* PhotoHeightPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHeightPreferenceKey.swift; sourceTree = "<group>"; };
 		00DCDBB42838109700A930DD /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		00E5DEC928218A6300002722 /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
 		00E5DECB28218F5200002722 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		008C6BBC28183520004EDF7B /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				00AE90EA28428EC300817D8D /* Preferences */,
 				008C6BFF281D67DE004EDF7B /* TabBar */,
 				008C6BF2281C4229004EDF7B /* Navigations */,
 				008C6BB9281834EC004EDF7B /* View Builders */,
@@ -338,6 +341,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		00AE90EA28428EC300817D8D /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				00AE90EB28428F1D00817D8D /* PhotoHeightPreferenceKey.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
 		00DCDBB32838105B00A930DD /* CastomButtons */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +517,7 @@
 				00DCDBB52838109700A930DD /* LikeButton.swift in Sources */,
 				00E5DEDA282431F800002722 /* DetachableObject.swift in Sources */,
 				00E5DED8282431D700002722 /* RealmService.swift in Sources */,
+				00AE90EC28428F1D00817D8D /* PhotoHeightPreferenceKey.swift in Sources */,
 				008C6BFA281D5F15004EDF7B /* NewsView.swift in Sources */,
 				008C6BC02818370D004EDF7B /* GroupsViewCell.swift in Sources */,
 				00F9C4D62812C52800179F3D /* VK_SwiftUI_GB_KSApp.swift in Sources */,
