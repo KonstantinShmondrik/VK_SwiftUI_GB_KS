@@ -13,6 +13,13 @@ struct FriendPhotosView: View {
     
     @ObservedObject var viewModel: PhotosViewModel
     
+    let columns = [
+        GridItem(.flexible(minimum: 0, maximum: .infinity)),
+        GridItem(.flexible(minimum: 0, maximum: .infinity))
+    ]
+    
+    @State private var photoRowHeight: CGFloat? = nil
+    @State private var selection: Int? = nil
     
     init(viewModel: PhotosViewModel) {
         self.viewModel = viewModel
@@ -30,20 +37,43 @@ struct FriendPhotosView: View {
                     .lineLimit(1)
                     .font(.largeTitle)
             }
-            
-            ASCollectionView(data: viewModel.photos) {(photo, context) in
-                return PhotosViewCell(photo: photo)
-            }.layout {
-                .grid(layoutMode: .fixedNumberOfColumns(2),
-                      itemSpacing: 10,
-                      lineSpacing: 10)
+            GeometryReader { geometry in
+                ScrollView(.vertical) {
+                    LazyVGrid(columns: columns, alignment: .center, spacing: 16) {
+                        if let photos = viewModel.photos {
+                            ForEach(photos) { photo in
+                                PhotosViewCell(photo: photo, index: photos.index(of: photo) , selection: $selection)
+                                    .frame(height: photoRowHeight)
+                            }
+                        }
+                    }
+                }
             }
             .onAppear { viewModel.fetch() }
             .navigationBarTitle("\((viewModel.friend.firstName )) \(viewModel.friend.lastName )", displayMode: .inline)
+            .onPreferenceChange(PhotoHeightPreferenceKey.self) {height in
+                photoRowHeight = height
+            }
+            .overlayPreferenceValue(SelectionsPreferenceKey.self) {
+                SelectionRectangle(anchor: $0)
+            }
+            
         }
     }
 }
 
+
+
+
+//ASCollectionView(data: viewModel.photos) {(photo, context) in
+//                return PhotosViewCell(photo: photo)
+//            }.layout {
+//                .grid(layoutMode: .fixedNumberOfColumns(2),
+//                      itemSpacing: 10,
+//                      lineSpacing: 10)
+//            }
+//            .onAppear { viewModel.fetch() }
+//            .navigationBarTitle("\((viewModel.friend.firstName )) \(viewModel.friend.lastName )", displayMode: .inline)
 
 //struct FriendPhotosView_Previews: PreviewProvider {
 //
@@ -51,3 +81,6 @@ struct FriendPhotosView: View {
 //        FriendPhotosView(viewModel: PhotosViewModel(friend: Friend() , api: PhotosAPI()))
 //    }
 //}
+
+
+
