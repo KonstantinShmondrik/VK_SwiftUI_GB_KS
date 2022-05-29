@@ -19,6 +19,7 @@ struct FriendPhotosView: View {
     ]
     
     @State private var photoRowHeight: CGFloat? = nil
+    @State private var selection: Int? = nil
     
     init(viewModel: PhotosViewModel) {
         self.viewModel = viewModel
@@ -41,7 +42,7 @@ struct FriendPhotosView: View {
                     LazyVGrid(columns: columns, alignment: .center, spacing: 16) {
                         if let photos = viewModel.photos {
                             ForEach(photos) { photo in
-                                PhotosViewCell(photo: photo)
+                                PhotosViewCell(photo: photo, index: photos.index(of: photo) , selection: $selection)
                                     .frame(height: photoRowHeight)
                             }
                         }
@@ -53,13 +54,18 @@ struct FriendPhotosView: View {
             .onPreferenceChange(PhotoHeightPreferenceKey.self) {height in
                 photoRowHeight = height
             }
+            .overlayPreferenceValue(SelectionsPreferenceKey.self) {
+                SelectionRectangle(anchor: $0)
+            }
             
-            
-            
-            
-            
-            
-//            ASCollectionView(data: viewModel.photos) {(photo, context) in
+        }
+    }
+}
+
+
+
+
+//ASCollectionView(data: viewModel.photos) {(photo, context) in
 //                return PhotosViewCell(photo: photo)
 //            }.layout {
 //                .grid(layoutMode: .fixedNumberOfColumns(2),
@@ -68,10 +74,6 @@ struct FriendPhotosView: View {
 //            }
 //            .onAppear { viewModel.fetch() }
 //            .navigationBarTitle("\((viewModel.friend.firstName )) \(viewModel.friend.lastName )", displayMode: .inline)
-        }
-    }
-}
-
 
 //struct FriendPhotosView_Previews: PreviewProvider {
 //
@@ -79,3 +81,6 @@ struct FriendPhotosView: View {
 //        FriendPhotosView(viewModel: PhotosViewModel(friend: Friend() , api: PhotosAPI()))
 //    }
 //}
+
+
+

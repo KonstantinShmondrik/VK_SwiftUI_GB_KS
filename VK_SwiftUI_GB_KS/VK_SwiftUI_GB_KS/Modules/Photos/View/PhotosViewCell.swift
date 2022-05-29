@@ -11,29 +11,36 @@ import SDWebImageSwiftUI
 struct PhotosViewCell: View {
     
     var photo: Photos
+    let index: Int?
+    @Binding var selection: Int?
     
-    init(photo: Photos) {
-        self.photo = photo
-    }
+    
     
     @State private var likeName = ""
     
     var body: some View {
         
-        GeometryReader { proxy in
+        return GeometryReader { proxy in
             VStack {
                 WebImage(url: URL(string: photo.sizes.last?.url ?? ""))
-                
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
-//                    .frame(width: proxy.size.width)
+                    .frame(width: proxy.size.width/2, height: proxy.size.width/2)
+                    .scaledToFill()
+                Spacer().frame(height: 5)
                 
-                Spacer()
                 LikeButton()
                     .frame(width: proxy.size.width)
             }
-            
-            .preference(key: PhotoHeightPreferenceKey.self, value: proxy.size.width)
+            .aspectRatio(1, contentMode: .fill)
+            .preference(key: PhotoHeightPreferenceKey.self, value: proxy.size.width/1.5)
+            .anchorPreference(key: SelectionsPreferenceKey.self, value: .bounds) {
+                index == self.selection ? $0 : nil
+            }
+            .onTapGesture {
+                withAnimation(.default) {
+                    self.selection = index
+                }
+            }
         }
     }
 }

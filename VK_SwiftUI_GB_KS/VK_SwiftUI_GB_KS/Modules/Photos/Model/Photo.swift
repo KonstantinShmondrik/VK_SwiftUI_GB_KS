@@ -20,7 +20,9 @@ struct PhotoResponse: Codable {
 }
 
 // MARK: - Item
-struct Photos: Codable, Identifiable {
+struct Photos: Codable, Identifiable, Equatable {
+   
+    
     let albumID, id, date: Int
     let text: String
     let sizes: [Size]
@@ -35,6 +37,13 @@ struct Photos: Codable, Identifiable {
         case hasTags = "has_tags"
         case ownerID = "owner_id"
         case postID = "post_id"
+    }
+    
+    static func == (lhs: Photos, rhs: Photos) -> Bool {
+        if let l = lhs as? Photos, let r = rhs as? Photos {
+                return l.id == r.id
+            }
+            return false
     }
 }
 
